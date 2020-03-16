@@ -3,13 +3,117 @@
 <head>
 	<title>this is study html</title>
 </head>
-<body>
-	<h1>这是标题1</h1>
-	<p1>这是段落1</p1>
-	<br/>
+<body bgcolor="white">
+	
+	<h1 align="center">这是标题1</h1>
+	<hr/><!--  水平线-->
+	<!--注释：浏览器会自动地在段落的前后添加空行。（<p> 是块级元素）-->
+	<p>这是段落1</p>
+	
+	<br/><!--  注释-->
 	<a href = "http://www.w3school.com.cn">this is link</a>
 	<br/>	
 	<img src="./eg_w3school.gif" width="108" height="142" />
+	<p> this is <br/> second</p>
+	<br/>
 
 </body>
-</html>>
+<body style="background-color: yellow"><!--样式，，将取代属性gbcolor-->
+	<h2 style="background-color:red;font-family: verdana;font-size: 20px">This is a heading</h2>
+	<p style="background-color:green;text-align: center;">This is a paragraph.</p>
+	This text contains
+	<sup>superscript</sup>
+	<sub>suberscript</sub>
+	<pre>
+这是
+预格式文本。
+它保留了      空格
+和换行。
+	</pre>
+	<b style="font-size: 40px">加粗</b>
+	<br/>
+
+	<code>Computer code</code>
+	<br />
+	<kbd>Keyboard input</kbd>
+	<br />
+	<tt>Teletype text</tt>
+	<br />
+	<samp>Sample text</samp>
+	<br />
+	<var>Computer variable</var>
+	<br />
+
+	<address>
+	Written by <a href="mailto:webmaster@example.com">Donald Duck</a>.<br> 
+	Visit us at:<br>
+	Example.com<br>
+	Box 564, Disneyland<br>
+	USA
+	</address>
+
+	<abbr title="etcetera">etc</abbr>
+	<p>hello world<br /></p>
+	<abbr title="etcetera">era</abbr>
+	<br />
+	<acronym title="World Wide Web">WWW</acronym>
+	<br />
+	<acronym title="hello world html">HWH</acronym>
+	<p>在某些浏览器中，当您把鼠标移至缩略词语上时，title 可用于展示表达的完整版本。</p>
+
+	<p>仅对于 IE 5 中的 acronym 元素有效。</p>
+
+	<p>对于 Netscape 6.2 中的 abbr 和 acronym 元素都有效。</p>
+
+
+	<p>
+	如果您的浏览器支持 bi-directional override (bdo)，下一行会从右向左输出 (rtl)；
+	</p>
+
+	<bdo dir = "rtl">   this r t l</bdo>
+	<br/>
+	<bdo dir = "ltr">this is l t r</bdo>
+	<br/>
+
+	这是长引用
+	<blockquote cite="http://example.com/facts">
+		<p>这是块引用</p>
+	</blockquote>
+	<q>
+	这是短的引用。
+	</q>
+	<br/>
+
+	<p>一打有 <del>二十</del> <ins>十二</ins> 件。</p>
+
+	<p>大多数浏览器会改写为删除文本和下划线文本。</p>
+
+	<p>一些老式的浏览器会把删除文本和下划线文本显示为普通文本。</p>
+
+	<!--如果设置了 <dfn> 元素的 title 属性，则定义项目：-->
+	<p><dfn title="World Health Organization">WHO</dfn> 成立于 1948 年。</p>
+	<!--如果 <dfn> 元素包含具有标题的 <abbr> 元素，则 title 定义项目：-->
+	<p><dfn><abbr title="World Health Organization">WHO</abbr></dfn> 成立于 1948 年。</p>
+	<!--否则，<dfn> 文本内容即是项目，并且父元素包含定义。-->
+	<p><dfn>WHO</dfn> World Health Organization 成立于 1948 年。</p>
+
+	<!--用于著作标题-->
+	<p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+	<p>HTML samp 元素表示计算机输出示例：</p>
+
+	<samp><b style="font-family: verdana;font-size: 40px">
+	demo.example.com login: Apr 12 09:10:17
+	Linux 2.6.10-grsec+gg3+e+fhs6b+nfs+gr0501+++p3+c4a+gr2b-reslog-v6.189</b>
+	</samp>
+
+	<p>编程代码示例：</p>
+
+	<code>
+	var person = {firstName:"Bill", lastName:"Gats", age:50}
+	</code>
+	<P>var person = {firstName:"Bill", lastName:"Gats", age:50}</P>
+
+	<p><var>E = m c<sup>2</sup></var></p>
+</body>
+</html>
