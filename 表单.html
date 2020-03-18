@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表单</title>
+</head>
+<body>
+	<!-- 如果省略 action 属性，则 action 会被设置为当前页面。 -->
+	<form action="表单_submit" method="get" accept-charset="utf-8" action="action_page.php">
+		<!-- 单选按钮输入 -->
+		<input type="radio" name="sex" value="radio" checked> radio
+		<input type="radio" name="sex" value="radios" > radios
+		<br/>
+		<!-- 文本输入 -->
+		<input type="text" name="firstname" value="aaa">firstname
+		<input type="text" name="lastname" value="bbb">lastname
+		<br/>
+		<br><br>
+		<!-- 提交按钮 -->
+		<input type="submit" value="Submit" method="GET">
+	</form>
+
+	<form action="/demo/demo_form.asp">
+	<fieldset>
+	<legend>Personal information:</legend>
+	First name:<br>
+	<input type="text" name="firstname" value="Mickey">
+	<br>
+	Last name:<br>
+	<input type="text" name="lastname" value="Mouse">
+	<br><br>
+	<input type="submit" value="Submit">
+	</fieldset>
+
+	<select name="cars">
+	<option value="volvo">Volvo</option>
+	<option value="saab">Saab</option>
+	<option value="fiat">Fiat</option>
+	<option value="audi">Audi</option>
+	</select>
+
+	<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+	<input type="password" name="psw">
+
+	<input type="number" name="points" min="0" max="100" step="10" value="30"  size="40" maxlength="10">
+	</form>
+
+</body>
+</html>
