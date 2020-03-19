@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<embed height="300" width="300" src="horse.mp3"></embed>
+<p><b>注释：</b>浏览器可能需要安装插件以后，才能播放该文件。</p>
+<object height="300" width="300" data="horse.mp3"></object>
+<br />
+<!-- 为了使这段音频在 Firefox 和 Opera 中同样有效，添加了一个 ogg 类型的文件。如果失败，会显示错误消息。 -->
+<audio controls="controls">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+Your browser does not support this audio format.
+</audio>
+
+
+<audio controls="controls" height="100" width="100">
+  <source src="song.mp3" type="audio/mp3" />
+  <source src="song.ogg" type="audio/ogg" />
+<embed height="100" width="100" src="song.mp3" />
+</audio>
+<!-- 
+上面的例子使用了两个不同的音频格式。HTML5 <audio> 元素会尝试以 mp3 或 ogg 来播放音频。如果失败，代码将回退尝试 <embed> 元素
+ -->
+
+
+<a href="horse.mp3">Play Sound</a>
+
+<script type="text/javascript" src="http://mediaplayer.yahoo.com/js">
+</script>
+
+
+<a href="song.mp3">Play the sound</a>
+<!-- 使用浏览器的插件来播放  超链接-->
+</body>
+</html> 
