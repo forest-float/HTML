@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+#div1, #div2
+{float:left; width:198px; height:66px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+</style>
+<script type="text/javascript">
+function allowDrop(ev)
+{
+ev.preventDefault();
+// 调用 preventDefault() 来阻止数据的浏览器默认处理方式（drop 事件的默认行为是以链接形式打开）
+}
+
+function drag(ev)
+{
+ev.dataTransfer.setData("Text",ev.target.id);
+// 规定拖动什么数据。
+// dataTransfer.setData() 方法设置被拖动数据的数据类型和值： 
+// 数据类型是 "text"，而值是这个可拖动元素的 id ("drag1")。
+}
+
+function drop(ev)
+{
+ev.preventDefault();
+var data=ev.dataTransfer.getData("Text");
+ev.target.appendChild(document.getElementById(data));
+// 调用 preventDefault() 来阻止数据的浏览器默认处理方式（drop 事件的默认行为是以链接形式打开）
+// 通过 dataTransfer.getData() 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据
+// 被拖数据是被拖元素的 id ("drag1")
+// 把被拖元素追加到放置元素中
+}
+</script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+	<!-- 首先 为了把一个元素设置为可拖放，请把 draggable 属性设置为 true： -->
+  <img src="https://www.w3school.com.cn/i/eg_dragdrop_w3school.gif" draggable="true" 
+  ondragstart="drag(event)" id="drag1" />
+  <!-- 然后，规定当元素被拖动时发生的事情。 -->
+  <!-- ondragstart 属性调用了一个 drag(event) 函数，规定拖动什么数据。
+	dataTransfer.setData() 方法设置被拖动数据的数据类型和值： 
+	数据类型是 "text"，而值是这个可拖动元素的 id ("drag1")。
+	-->
+	<!-- 默认地，数据/元素无法被放置到其他元素中。为了实现拖放，我们必须阻止元素的这种默认的处理方式。
+
+这个任务由 ondragover 事件的 event.preventDefault() 方法完成： -->
+</div>
+<!-- ondragover 事件规定被拖动的数据能够被放置到何处。 -->
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+</body>
+</html>
